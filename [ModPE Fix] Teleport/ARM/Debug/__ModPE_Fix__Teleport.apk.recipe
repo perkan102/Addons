@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project>
+  <SOLibPaths />
+  <AndroidLibPaths />
+  <OObjPaths />
+  <Configuration />
+  <Platform />
+  <AndroidArchitecture />
+  <!--links to other recipe files-->
+  <RecipeFiles>C:\Users\dlyou\Documents\Visual Studio 2015\Projects\[ModPE Fix] Teleport\ARM\Debug\libcom.perkan.modpe_tpfix.so.recipe</RecipeFiles>
+</project>

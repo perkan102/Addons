@@ -83,22 +83,22 @@ D:\Develop\mcpe/minecraftpe/network/protocol/TextPacket.h(10,14): warning : 'cha
 D:\Develop\mcpe/minecraftpe/network/protocol/TextPacket.h(18,2): warning : when initialized here [-Wreorder]
     TextPacket(const std::string &name, const std::string &text, char type, const std::vector<std::string> &textList = std::vector<std::string>()) : Packet(), name(name), text(text), type(type), textList(textList) {}
     ^
-  In file included from main.cpp:9:0:
+  In file included from main.cpp:10:0:
   main.cpp: In function 'jint JNI_OnLoad(JavaVM*, void*)':
-main.cpp(93,42): warning : converting from 'void (MinecraftClient::*)()' to 'void*' [-Wpmf-conversions]
+main.cpp(104,42): warning : converting from 'void (MinecraftClient::*)()' to 'void*' [-Wpmf-conversions]
     MSHookFunction HOOKING(MinecraftClient::init, MinecraftClient$init_hook, MinecraftClient$init_real);
                                             ^
   D:\Develop\mcpe/hook/hook.h:11:44: note: in definition of macro 'HOOKING'
    #define HOOKING(func, hook, real) ((void*)&func, (void*)&hook, (void**)&real)
                                               ^
-main.cpp(94,30): warning : converting from 'void (Gui::*)(const string&) {aka void (Gui::*)(const std::basic_string<char>&)}' to 'void*' [-Wpmf-conversions]
+main.cpp(105,30): warning : converting from 'void (Gui::*)(const string&) {aka void (Gui::*)(const std::basic_string<char>&)}' to 'void*' [-Wpmf-conversions]
     MSHookFunction HOOKING(Gui::displayClientMessage, Gui$displayClientMessage_hook, Gui$displayClientMessage_real);
                                 ^
   D:\Develop\mcpe/hook/hook.h:11:44: note: in definition of macro 'HOOKING'
    #define HOOKING(func, hook, real) ((void*)&func, (void*)&hook, (void**)&real)
                                               ^
   main.cpp: At global scope:
-main.cpp(21,13): warning : 'bool operator==(Vec3&, Vec3&)' defined but not used [-Wunused-function]
+main.cpp(23,13): warning : 'bool operator==(Vec3&, Vec3&)' defined but not used [-Wunused-function]
    static bool operator==(Vec3& vec1, Vec3& vec2) {
                ^
   [Addon] [CustomModPE].NativeActivity.vcxproj -> C:\Users\dlyou\Documents\Visual Studio 2015\Projects\[Addon] [CustomModPE]\ARM\Debug\libcom.perkan.modpe.so

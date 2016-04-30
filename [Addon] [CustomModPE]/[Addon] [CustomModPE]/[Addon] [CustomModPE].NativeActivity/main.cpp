@@ -6,24 +6,26 @@
 #include "minecraftpe/network/protocol/MovePlayerPacket.h"
 #include "minecraftpe/network/protocol/TextPacket.h"
 #include "minecraftpe/network/protocol/SetPlayerGameTypePacket.h"
+#include "minecraftpe/network/protocol/DisconnectPacket.h"
 #include "hook/hook.h"
 #include "access.h"
 
 static MinecraftClient* mc = 0;
-static void** ENTITY_VTABLE = (void**)dlsym(RTLD_DEFAULT, "_ZTV6Entity");
+static void** Player_vtable = (void**)dlsym(RTLD_DEFAULT, "_ZTV6Player");
 
 static const std::string TP_KEY = "@TELEPORT";
 static bool TP_FLAG = false;
 
 static const std::string PRIVATE_KEY = "@PRIVATE_SENDCHAT";
 static const std::string GAMEMODE_KEY = "@GAMEMODE";
+static const std::string DISCONNECT_KEY = "@DISCONNECT";
 
 static bool operator==(Vec3& vec1, Vec3& vec2) {
 	return vec1.x == vec2.x && vec1.y == vec2.y && vec1.z == vec2.z;
 }
 
 static bool isPlayer(Entity* entity) {
-	return (access(void**, entity, 0))[0x14C] != ENTITY_VTABLE[0x154];
+	return (access(void**, entity, 0))[0x14C] == Player_vtable[0x154];
 }
 
 static void(*MinecraftClient$init_real)(MinecraftClient*);
@@ -71,7 +73,7 @@ static void Entity$setNameTag_hook(Entity* $this, const std::string& entity_name
 			}
 		}
 		
-		if (entity_name.size() >= GAMEMODE_KEY.size()) {
+		if (entity_name.size() > GAMEMODE_KEY.size()) {
 			if (entity_name.substr(0, GAMEMODE_KEY.size()) == GAMEMODE_KEY) {
 				Player* player = (Player*)$this;
 				GameType gametype = (GameType)(entity_name[GAMEMODE_KEY.size()] - '0');
@@ -83,6 +85,15 @@ static void Entity$setNameTag_hook(Entity* $this, const std::string& entity_name
 					mc->setGameMode(gametype);
 					mc->getServer()->getLevel()->getLevelData()->setGameType(gametype);
 				}
+			}
+		}
+
+		if (entity_name.size() > DISCONNECT_KEY.size()) {
+			if (entity_name.substr(0, DISCONNECT_KEY.size()) == DISCONNECT_KEY) {
+				Player* player = (Player*)$this;
+				DisconnectPacket packet;
+				packet.message = entity_name.substr(DISCONNECT_KEY.size(), entity_name.size());
+				mc->getServer()->getPacketSender()->send(player->getRakNetGUID(), packet);
 			}
 		}
 	}

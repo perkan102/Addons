@@ -1,0 +1,104 @@
+﻿  ANDROID_HOME=C:\Program Files (x86)\Android\android-sdk
+  ANT_HOME=D:\Program Files\Visual Studio\Apps\apache-ant-1.9.3\
+  JAVA_HOME=C:\Program Files (x86)\Java\jdk1.7.0_55
+  NDK_ROOT=C:\ProgramData\Microsoft\AndroidNDK64\android-ndk-r10e\
+  ChatColor.cpp
+  CustomFunctions.cpp
+  D:\Develop\mcpe\CustomFunctions.cpp: In static member function 'static std::string CustomFunctions::toLowerCase(const string&)':
+D:\Develop\mcpe\CustomFunctions.cpp(31,20): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for (int i = 0; i < str.size(); i++)
+                      ^
+  D:\Develop\mcpe\CustomFunctions.cpp: In static member function 'static std::string CustomFunctions::toUpperCase(const string&)':
+D:\Develop\mcpe\CustomFunctions.cpp(42,20): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for (int i = 0; i < str.size(); i++)
+                      ^
+  D:\Develop\mcpe\CustomFunctions.cpp: In static member function 'static std::string CustomFunctions::join(std::vector<std::basic_string<char> >&, char)':
+D:\Develop\mcpe\CustomFunctions.cpp(70,20): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for (int i = 0; i < vect.size(); i++) result += vect[i] + delim;
+                      ^
+  D:\Develop\mcpe\CustomFunctions.cpp: In static member function 'static int CustomFunctions::indexOf(const string&, char)':
+D:\Develop\mcpe\CustomFunctions.cpp(145,20): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for (int i = 0; i < string.size(); i++) if (string[i] == delim) return i;
+                      ^
+  D:\Develop\mcpe\CustomFunctions.cpp: In static member function 'static bool CustomFunctions::regEx_test(std::string, std::string)':
+D:\Develop\mcpe\CustomFunctions.cpp(151,20): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for (int i = 0; i < delim.size(); i++)
+                      ^
+  hook.cpp
+  ChatScreen.cpp
+  Entity.cpp
+  Player.cpp
+  Inventory.cpp
+  D:\Develop\mcpe\minecraftpe\inventory\Inventory.cpp: In member function 'void Inventory::sort()':
+D:\Develop\mcpe\minecraftpe\inventory\Inventory.cpp(21,20): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for (int i = 0; i < vInv.size(); i++) {
+                      ^
+  D:\Develop\mcpe\minecraftpe\inventory\Inventory.cpp: In member function 'void Inventory::synInv(MinecraftClient*)':
+D:\Develop\mcpe\minecraftpe\inventory\Inventory.cpp(29,8): warning : unused variable 'checked' [-Wunused-variable]
+     bool checked = false;
+          ^
+  In file included from D:\Develop\mcpe\minecraftpe\inventory\Inventory.h:8:0,
+                   from D:\Develop\mcpe\minecraftpe\inventory\Inventory.cpp:1:
+  D:\Develop\mcpe\minecraftpe\inventory\../../Vector.h: In instantiation of 'static void Vector<E>::sort(std::vector<E>&, float (*)(E&, E&)) [with E = ItemInstance]':
+  D:\Develop\mcpe\minecraftpe\inventory\Inventory.cpp:20:24:   required from here
+D:\Develop\mcpe\minecraftpe\inventory\../../Vector.h(54,20): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for (int i = 0; i < vect.size() - 1; i++) {
+                      ^
+D:\Develop\mcpe\minecraftpe\inventory\../../Vector.h(55,21): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int j = 1; j < vect.size() - i; j++) {
+                       ^
+  D:\Develop\mcpe\minecraftpe\inventory\../../Vector.h: In instantiation of 'static void Vector<E>::swap(std::vector<E>&, int, int) [with E = ItemInstance]':
+  D:\Develop\mcpe\minecraftpe\inventory\../../Vector.h:57:24:   required from 'static void Vector<E>::sort(std::vector<E>&, float (*)(E&, E&)) [with E = ItemInstance]'
+  D:\Develop\mcpe\minecraftpe\inventory\Inventory.cpp:20:24:   required from here
+D:\Develop\mcpe\minecraftpe\inventory\../../Vector.h(44,34): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if (idx1 >= vect.size() || idx2 >= vect.size() || idx1 < 0 || idx2 < 0) return;
+                                    ^
+D:\Develop\mcpe\minecraftpe\inventory\../../Vector.h(44,11): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if (idx1 >= vect.size() || idx2 >= vect.size() || idx1 < 0 || idx2 < 0) return;
+             ^
+  ItemInstance.cpp
+  RemoveBlockPacket.cpp
+  Vec2.cpp
+  Vec3.cpp
+  ViewVector.cpp
+  main.cpp
+  In file included from main.cpp:7:0:
+  D:\Develop\mcpe/minecraftpe/network/protocol/TextPacket.h: In constructor 'TextPacket::TextPacket(const string&, const string&, char)':
+D:\Develop\mcpe/minecraftpe/network/protocol/TextPacket.h(12,21): warning : 'TextPacket::text' will be initialized after [-Wreorder]
+    std::string text = ""; // 20
+                       ^
+D:\Develop\mcpe/minecraftpe/network/protocol/TextPacket.h(10,14): warning : 'char TextPacket::type' [-Wreorder]
+    char type = 1; // 14
+                ^
+D:\Develop\mcpe/minecraftpe/network/protocol/TextPacket.h(17,2): warning : when initialized here [-Wreorder]
+    TextPacket(const std::string &name, const std::string &text, char type) : Packet(), name(name), text(text), type(type) {}
+    ^
+  D:\Develop\mcpe/minecraftpe/network/protocol/TextPacket.h: In constructor 'TextPacket::TextPacket(const string&, const string&, char, const std::vector<std::basic_string<char> >&)':
+D:\Develop\mcpe/minecraftpe/network/protocol/TextPacket.h(12,21): warning : 'TextPacket::text' will be initialized after [-Wreorder]
+    std::string text = ""; // 20
+                       ^
+D:\Develop\mcpe/minecraftpe/network/protocol/TextPacket.h(10,14): warning : 'char TextPacket::type' [-Wreorder]
+    char type = 1; // 14
+                ^
+D:\Develop\mcpe/minecraftpe/network/protocol/TextPacket.h(18,2): warning : when initialized here [-Wreorder]
+    TextPacket(const std::string &name, const std::string &text, char type, const std::vector<std::string> &textList = std::vector<std::string>()) : Packet(), name(name), text(text), type(type), textList(textList) {}
+    ^
+  In file included from main.cpp:9:0:
+  main.cpp: In function 'jint JNI_OnLoad(JavaVM*, void*)':
+main.cpp(93,42): warning : converting from 'void (MinecraftClient::*)()' to 'void*' [-Wpmf-conversions]
+    MSHookFunction HOOKING(MinecraftClient::init, MinecraftClient$init_hook, MinecraftClient$init_real);
+                                            ^
+  D:\Develop\mcpe/hook/hook.h:11:44: note: in definition of macro 'HOOKING'
+   #define HOOKING(func, hook, real) ((void*)&func, (void*)&hook, (void**)&real)
+                                              ^
+main.cpp(94,30): warning : converting from 'void (Gui::*)(const string&) {aka void (Gui::*)(const std::basic_string<char>&)}' to 'void*' [-Wpmf-conversions]
+    MSHookFunction HOOKING(Gui::displayClientMessage, Gui$displayClientMessage_hook, Gui$displayClientMessage_real);
+                                ^
+  D:\Develop\mcpe/hook/hook.h:11:44: note: in definition of macro 'HOOKING'
+   #define HOOKING(func, hook, real) ((void*)&func, (void*)&hook, (void**)&real)
+                                              ^
+  main.cpp: At global scope:
+main.cpp(21,13): warning : 'bool operator==(Vec3&, Vec3&)' defined but not used [-Wunused-function]
+   static bool operator==(Vec3& vec1, Vec3& vec2) {
+               ^
+  [Addon] [CustomModPE].NativeActivity.vcxproj -> C:\Users\dlyou\Documents\Visual Studio 2015\Projects\[Addon] [CustomModPE]\ARM\Debug\libcom.perkan.modpe.so

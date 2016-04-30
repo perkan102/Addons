@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="D:\Develop\mcpe\minecraftpe\util\Vec2.cpp">
+      <Filter>libs</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Develop\mcpe\minecraftpe\util\Vec3.cpp">
+      <Filter>libs</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Develop\mcpe\ChatColor.cpp">
+      <Filter>libs</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Develop\mcpe\hook\hook.cpp">
+      <Filter>libs</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Develop\mcpe\minecraftpe\entity\player\Player.cpp">
+      <Filter>libs</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Develop\mcpe\minecraftpe\network\protocol\RemoveBlockPacket.cpp">
+      <Filter>libs</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Develop\mcpe\minecraftpe\inventory\Inventory.cpp">
+      <Filter>libs</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Develop\mcpe\ViewVector.cpp">
+      <Filter>libs</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Develop\mcpe\minecraftpe\item\ItemInstance.cpp">
+      <Filter>libs</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Develop\mcpe\minecraftpe\entity\Entity.cpp">
+      <Filter>libs</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Develop\mcpe\minecraftpe\client\resources\ChatScreen.cpp">
+      <Filter>libs</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Develop\mcpe\CustomFunctions.cpp">
+      <Filter>libs</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="libs">
+      <UniqueIdentifier>{d1c8ec4d-4fe7-4b68-97eb-4053a68cc719}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

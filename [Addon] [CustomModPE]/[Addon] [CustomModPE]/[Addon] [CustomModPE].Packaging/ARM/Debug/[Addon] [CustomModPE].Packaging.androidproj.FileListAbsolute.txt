@@ -1,0 +1,12 @@
+c:\users\dlyou\documents\visual studio 2015\Projects\[Addon] [CustomModPE]\ARM\Debug\__Addon___CustomModPE_.apk.recipe
+c:\users\dlyou\documents\visual studio 2015\Projects\[Addon] [CustomModPE]\ARM\Debug\__Addon___CustomModPE_.apk.recipe.merged
+c:\users\dlyou\documents\visual studio 2015\Projects\[Addon] [CustomModPE]\ARM\Debug\Package\libs\armeabi-v7a\libcom.perkan.modpe.so
+c:\users\dlyou\documents\visual studio 2015\Projects\[Addon] [CustomModPE]\ARM\Debug\Package\libs\armeabi-v7a\gdbserver
+c:\users\dlyou\documents\visual studio 2015\Projects\[Addon] [CustomModPE]\ARM\Debug\Package\libs\armeabi-v7a\libgnustl_shared.so
+c:\users\dlyou\documents\visual studio 2015\Projects\[Addon] [CustomModPE]\ARM\Debug\Package\res\values\strings.xml
+c:\users\dlyou\documents\visual studio 2015\Projects\[Addon] [CustomModPE]\ARM\Debug\Package\AndroidManifest.xml
+c:\users\dlyou\documents\visual studio 2015\Projects\[Addon] [CustomModPE]\ARM\Debug\Package\project.properties
+c:\users\dlyou\documents\visual studio 2015\Projects\[Addon] [CustomModPE]\ARM\Debug\Package\build.xml
+c:\users\dlyou\documents\visual studio 2015\Projects\[Addon] [CustomModPE]\ARM\Debug\__Addon___CustomModPE_.apk
+c:\users\dlyou\documents\visual studio 2015\Projects\[Addon] [CustomModPE]\ARM\Debug\__Addon___CustomModPE_.lastsuccessfuldeploy
+c:\users\dlyou\documents\visual studio 2015\Projects\[Addon] [CustomModPE]\[Addon] [CustomModPE]\[Addon] [CustomModPE].Packaging\ARM\Debug\FileStringReplace.incremental
